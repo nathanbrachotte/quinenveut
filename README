@@ -1,0 +1,10 @@
+####################################
+#             T E S T              #
+####################################
+
+Pour lancer les tests atoum :
+en ligne de commande
+
+$>   php applis/atoum/atoum.phar -d Test/ -bf Test/.bootstrap.atoum.php
+
+(dans le répertoire courant)
