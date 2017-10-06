@@ -4,5 +4,29 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/applis/phpdox/phpdox.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/phpcpd/phpcpd.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/phpmd/phpmd.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/phpcs/phpcs.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/phpcb/phpcb.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/atoum/atoum.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/pdepend/pdepend.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/phploc/phploc.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/applis/phpdox/phpdox.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/phpcpd/phpcpd.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/phpmd/phpmd.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/phpcs/phpcs.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/phpcb/phpcb.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/atoum/atoum.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/pdepend/pdepend.phar/" />
+          <root url="phar://$MODULE_DIR$/applis/phploc/phploc.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
