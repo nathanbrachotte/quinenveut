@@ -62,13 +62,19 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Catégories</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-list"></span> Catégories</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-edit"></span> Inscription</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-12 text-left">
+            <h1><?php echo $title ?></h1>
+        </div>

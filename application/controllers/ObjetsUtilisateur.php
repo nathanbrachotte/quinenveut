@@ -25,7 +25,7 @@ class ObjetsUtilisateur extends CI_Controller
 
         $data['title'] = 'Liste des objets de l\'utilisateur '.$id_user;
 
-        $this->load->view('templates/header',$data);
+        $this->load->view('templates/header_visiteur',$data);
 
 
         if (sizeof($objets) == 0)

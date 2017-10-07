@@ -17,7 +17,7 @@ class Accueil extends CI_Controller
     {
         $data['title'] = 'Qui n\'en veut !?';
 
-        $this->load->view('templates/header', $data);
+        $this->load->view('templates/header_visiteur', $data);
         $this->load->view('accueil');
         $this->load->view('templates/footer');
     }

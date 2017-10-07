@@ -1,3 +1,6 @@
+    </div>
+</div>
+
 <footer class="container-fluid text-center">
     <p>M2 - Test7 &copy; 2017</p>
 </footer>
