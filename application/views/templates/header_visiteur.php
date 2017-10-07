@@ -31,11 +31,25 @@
             height: 100%;
         }
 
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            /* Margin bottom by footer height */
+            margin-bottom: 60px;
+        }
+
         /* Set black background color, white text and some padding */
         footer {
             background-color: #555;
             color: white;
             padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 60px;
         }
 
         /* On small screens, set height to 'auto' for sidenav and grid */
