@@ -1,15 +1,9 @@
-<!--
- * Created by PhpStorm.
- * User: a-sellier
- * Date: 07/10/17
- * Time: 18:41
- *
--->
+<footer class="container-fluid text-center">
+    <p>M2 - Test7 &copy; 2017</p>
+</footer>
 
-        <em>&copy; 2017</em>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-    </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
 </html>
