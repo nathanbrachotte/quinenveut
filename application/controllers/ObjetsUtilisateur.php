@@ -21,12 +21,26 @@ class ObjetsUtilisateur extends CI_Controller
             show_404();
         }
 
+        $objets = $this->objets_model->get_objets_utilisateur($id_user);
+
         $data['title'] = 'Liste des objets de l\'utilisateur '.$id_user;
 
-        $data['objets'] = $this->objets_model->get_objets_utilisateur($id_user);
-
         $this->load->view('templates/header',$data);
-        $this->load->view('liste_objets_utilisateur', $data);
+
+
+        if (sizeof($objets) == 0)
+        {
+            $this->load->view('objet_aucun');
+            $this->load->view('templates/footer');
+            return;
+        }
+
+        foreach ($objets as $row)
+        {
+            $objet['nom'] = $row['nom_objet'];
+            $this->load->view('objet_vendeur', $objet);
+        }
+
         $this->load->view('templates/footer');
     }
 }
