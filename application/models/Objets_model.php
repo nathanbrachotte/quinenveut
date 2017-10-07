@@ -22,9 +22,10 @@ class Objets_model extends CI_Model
         return $query->result_array();
     }
 
-    public function get_objets_utilisateur()
+    public function get_objets_utilisateur($id_user)
     {
-
+        $query = $this->db->get_where('Objets', array('id_vendeur' => $id_user));
+        return $query->result_array();
     }
 
 }
