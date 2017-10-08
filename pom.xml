@@ -2,12 +2,12 @@
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>femtost</groupId>
-    <artifactId>webrobot</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>m2test7</groupId>
+    <artifactId>quinenveut</artifactId>
+    <version>1.0</version>
     <packaging>pom</packaging>
 
-    <name>webrobot</name>
+    <name>quinenveut</name>
     <url>http://maven.apache.org</url>
 
 <build>
