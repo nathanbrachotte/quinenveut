@@ -1,10 +1,5 @@
-<!--
- * Created by PhpStorm.
- * User: a-sellier
- * Date: 07/10/17
- * Time: 18:41
- *
--->
+<!-- en-tête pour les visiteurs-->
+<!-- Created by a-sellier-->
 
 <?php $this->load->helper('url')?>
 

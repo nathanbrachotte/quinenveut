@@ -1,4 +1,7 @@
-    </div>
+<!-- bas de page -->
+<!-- Created by a-sellier-->
+
+</div>
 </div>
 
 <footer class="container-fluid text-center">

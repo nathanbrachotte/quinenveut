@@ -54,7 +54,7 @@ $route['404_override'] = 'errors/page_missing';
 $route['translate_uri_dashes'] = FALSE;
 
 
-$route['accueil'] = 'accueil/index';
+$route['accueil'] = 'accueil/lister_objets';
 $route['connexion'] = 'users/connexion';
 $route['inscription'] = 'users/inscription';
 $route['objets_en_vente'] = 'objets/lister';

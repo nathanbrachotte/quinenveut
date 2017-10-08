@@ -1,10 +1,5 @@
-<!--
- * Created by PhpStorm.
- * User: a-sellier
- * Date: 08/10/17
- * Time: 14:58
- *
--->
+<!-- en-tête pour les utilisateurs-->
+<!-- Created by a-sellier-->
 
 <!DOCTYPE html>
 <html lang="fr">

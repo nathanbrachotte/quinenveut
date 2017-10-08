@@ -1,9 +1,6 @@
-<!--
-* Created by PhpStorm.
-* User: a-sellier
-* Date: 07/10/17
-* Time: 18:36
--->
+<!-- page listant tous les objets-->
+<!-- Created by a-sellier-->
+
 <h1>Objets mis en vente</h1>
 
 <?php

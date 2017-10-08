@@ -11,14 +11,17 @@ class Accueil extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('objets_model');
     }
 
-    public function index()
+    public function lister_objets()
     {
-        $data['title'] = 'Qui n\'en veut !?';
+        $data['title'] = 'Liste des objets';
 
-        $this->load->view('templates/header_visiteur', $data);
-        $this->load->view('accueil');
+        $data['objets'] = $this->objets_model->get_objets();
+
+        $this->load->view('templates/header_visiteur',$data);
+        $this->load->view('liste_objets', $data);
         $this->load->view('templates/footer');
     }
 }
