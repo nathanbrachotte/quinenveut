@@ -11,6 +11,7 @@ class Users extends CI_Controller
     {
         parent::__construct();
         $this->load->model('users_model');
+        $this->load->helper('url');
     }
 
     public function inscription()
@@ -39,8 +40,8 @@ class Users extends CI_Controller
                 'statut'=>0,
             );
             $this->users_model->insert($data);
-            echo "You have registered successfully and logged in! 
-                <br>Page home (wating.....)";
+            //TODO : avertir l'utilisateur de son inscription
+            redirect('accueil', 'refresh');
         }
         else
         {
@@ -77,8 +78,9 @@ class Users extends CI_Controller
         }
         else
         {
-            echo "Logged in successfully!
-                <br>Page home (wating.....)";
+            //Logged in successfully
+            //TODO : avertir l'utilisateur de sa connection
+            redirect('accueil', 'refresh');
         }
     }
 }
