@@ -54,4 +54,6 @@ $route['404_override'] = 'errors/page_missing';
 $route['translate_uri_dashes'] = FALSE;
 
 
-$route['accueil'] = ['accueil/index'];
+$route['accueil'] = 'accueil/index';
+$route['connexion'] = 'users/connexion';
+$route['inscription'] = 'users/inscription';
