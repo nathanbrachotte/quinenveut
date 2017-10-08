@@ -18,12 +18,17 @@ class Encheres_model extends CI_Model
 
     public function get_encheres()
     {
-
+        $query = $this->db->get('Encheres');
+        return $query->result_array();
     }
 
-    public function get_encheres_utilisateur()
+    public function get_encheres_utilisateur($id_user)
     {
-
+        $query = $this->db->get_where('Encheres', array('id_acheteur' => $id_user));
     }
 
+    public function get_encheres_objet($id_objet)
+    {
+        $query = $this->db->get_where('Encheres', array('id_objet' => $id_objet));
+    }
 }
