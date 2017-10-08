@@ -77,7 +77,7 @@ class Users extends CI_Controller
         }
         else
         {
-            echo "Logged in successfully! 
+            echo "Logged in successfully!
                 <br>Page home (wating.....)";
         }
     }

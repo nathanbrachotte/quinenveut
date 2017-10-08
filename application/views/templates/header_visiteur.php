@@ -6,8 +6,10 @@
  *
 -->
 
+<?php $this->load->helper('url')?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <title>Qui n'en veut !?</title>
     <meta charset="utf-8">
@@ -72,16 +74,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="accueil">Qui n'en veut</a>
+            <a class="navbar-brand" href="<?php echo site_url('accueil') ?>">Qui n'en veut</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="accueil"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+                <li><a href="<?php echo site_url('accueil') ?>"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-list"></span> Catégories</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="inscription"><span class="glyphicon glyphicon-edit"></span> Inscription</a></li>
-                <li><a href="connexion"><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
+                <li><a href="<?php echo site_url('inscription') ?>"><span class="glyphicon glyphicon-edit"></span> Inscription</a></li>
+                <li><a href="<?php echo site_url('connexion') ?>"><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
             </ul>
         </div>
     </div>
