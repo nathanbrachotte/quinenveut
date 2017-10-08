@@ -86,6 +86,3 @@
 
 <div class="container-fluid text-center">
     <div class="row content">
-        <div class="col-sm-12 text-left">
-            <h1><?php echo $title ?></h1>
-        </div>
