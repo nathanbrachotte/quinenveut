@@ -24,4 +24,9 @@ class Objets extends CI_Controller
         $this->load->view('liste_objets', $data);
         $this->load->view('templates/footer');
     }
+    public function ajouter_objet(){
+        $this->load->library('form_validation');
+        $this->load->helper('url');
+
+    }
 }

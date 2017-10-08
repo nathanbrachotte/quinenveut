@@ -28,4 +28,10 @@ class Objets_model extends CI_Model
         return $query->result_array();
     }
 
+    public function insert_objet($data)
+    {
+        $this->db->insert('Objets', $data);
+    }
+
+
 }
