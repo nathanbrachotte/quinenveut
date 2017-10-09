@@ -2,7 +2,7 @@
 <!-- Created by a-sellier-->
 
 <div class="row">
-    <section class="col-sm-8 table-responsive">
+    <section class="col-sm-10 table-responsive">
         <table class="table table-bordered table-striped table-condensed">
             <caption>
                 <h4><?php echo $title ?></h4>

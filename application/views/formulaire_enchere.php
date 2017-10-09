@@ -1,4 +1,3 @@
-
 <!-- formulaire permettant de faire une offre pour un objet -->
 
 <?php
@@ -38,8 +37,7 @@ foreach ($objets as $objet)
 
 
     <center>
-    <h1>Encherire
-    </h1>
+    <h1>Encherir</h1>
 
     <form role="form" id="encherir" action="<?php echo base_url() ?>Encherir" method="post"  role="form">
 
