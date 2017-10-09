@@ -55,4 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['Encherir'] = "Encheres/Encherir";
 
-$route['accueil'] = ['accueil/index'];
+$route['accueil'] = 'accueil/lister_objets';
+$route['connexion'] = 'users/connexion';
+$route['inscription'] = 'users/inscription';
+$route['objets_en_vente'] = 'objets/lister';

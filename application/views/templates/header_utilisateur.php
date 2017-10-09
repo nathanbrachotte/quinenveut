@@ -1,7 +1,5 @@
-<!-- en-tête pour les visiteurs-->
+<!-- en-tête pour les utilisateurs-->
 <!-- Created by a-sellier-->
-
-<?php $this->load->helper('url')?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -14,7 +12,7 @@
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
-            margin-bottom: 0;
+    margin-bottom: 0;
             border-radius: 0;
         }
 
@@ -23,23 +21,23 @@
 
         /* Set gray background color and 100% height */
         .sidenav {
-            padding-top: 20px;
+    padding-top: 20px;
             background-color: #f1f1f1;
             height: 100%;
         }
 
         html {
-            position: relative;
-            min-height: 100%;
+    position: relative;
+    min-height: 100%;
         }
         body {
-            /* Margin bottom by footer height */
-            margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
         }
 
         /* Set black background color, white text and some padding */
         footer {
-            background-color: #555;
+    background-color: #555;
             color: white;
             padding: 15px;
             position: absolute;
@@ -51,9 +49,9 @@
 
         /* On small screens, set height to 'auto' for sidenav and grid */
         @media screen and (max-width: 767px) {
-            .sidenav {
-                height: auto;
-                padding: 15px;
+    .sidenav {
+        height: auto;
+        padding: 15px;
             }
             .row.content {height:auto;}
         }
@@ -69,16 +67,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo site_url('accueil') ?>">Qui n'en veut</a>
+            <a class="navbar-brand" href="accueil">Qui n'en veut</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo site_url('accueil') ?>"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+                <li><a href="accueil"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-list"></span> Catégories</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-edit"></span> Vendre un objet</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-piggy-bank"></span> Mes objets en vente</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-euro"></span> Mes enchères</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo site_url('inscription') ?>"><span class="glyphicon glyphicon-edit"></span> Inscription</a></li>
-                <li><a href="<?php echo site_url('connexion') ?>"><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
+                <li><a href="inscription"><span class="glyphicon glyphicon-user"></span> Mon compte</a></li>
+                <li><a href="connexion"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
             </ul>
         </div>
     </div>

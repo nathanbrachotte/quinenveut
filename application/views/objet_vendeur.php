@@ -1,10 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: a-sellier
- * Date: 07/10/17
- * Time: 21:21
- */
-?>
+<!-- un objet lorsqu'il est listé par son vendeur -->
+<!-- Created by a-sellier-->
 
 <div><?php echo $nom ?></div>

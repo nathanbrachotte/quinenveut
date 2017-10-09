@@ -1,10 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: a-sellier
- * Date: 07/10/17
- * Time: 21:21
- */
-?>
+<!-- page indiquant qu'aucun objet n'est en vente actuellement-->
+<!-- Created by a-sellier-->
 
 <p>Aucun objet en vente !</p>
