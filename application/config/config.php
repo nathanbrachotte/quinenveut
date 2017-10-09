@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//  Il faut definir la base_url -- > pour mon PC l url de projet est : (ANASS REGRAG)
-$config['base_url'] = 'http://localhost:8888/quinenveut/index.php';
+
+$config['base_url'] = '';
 
 /*
 |--------------------------------------------------------------------------

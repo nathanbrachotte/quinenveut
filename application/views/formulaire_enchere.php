@@ -54,7 +54,7 @@ foreach ($objets as $objet)
 
         <div class="box-footer">
             <input type="submit" class="btn btn-primary" value="Enregister" />
-            <input type="reset" class="btn btn-default" value="Anuler" />
+            <input type="reset" class="btn btn-default" value="Annuler" />
         </div>
     </form>
     </center>
