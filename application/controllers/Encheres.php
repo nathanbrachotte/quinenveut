@@ -17,7 +17,7 @@ class Encheres extends CI_Controller
         $this->load->model('Objets_model');
     }
 
-    function enchereslisting()
+    function encheres_listing()
     {
         $this->load->model('Encheres_model');
         $data['encheres'] = $this->Encheres_model->get_encheres();
@@ -25,28 +25,26 @@ class Encheres extends CI_Controller
 
     }
 
-    function EncherireObj($objetId)
+    function encherir_obj($id_objet)
     {
-
-        $data['objets'] = $this->Objets_model->get_objet_Info($objetId);
+        $data['objet'] = $this->Objets_model->get_objet($id_objet);
         $this->load->view('formulaire_enchere',$data);
-
     }
 
 
-    function Encherir(){
+    function encherir(){
 
         $this->load->library('form_validation');
 
-        $userId = $this->input->post('id_vendeur');
-        $objectId = $this->input->post('id_objet');
+        $id_user = $this->input->post('id_vendeur');
+        $id_objet = $this->input->post('id_objet');
         $prix = $this->input->post('prix');
 
 
-       $enchersInfo = array('id_acheteur'=>$userId,'id_objet'=>$objectId,'Prix'=>$prix);
+       $encheresInfo = array('id_acheteur'=>$id_user,'id_objet'=>$id_objet,'Prix'=>$prix);
 
         $this->load->model('Encheres_model');
-        $result = $this->Encheres_model->encherir($enchersInfo);
+        $result = $this->Encheres_model->encherir($encheresInfo);
 
         if($result > 0)
         {

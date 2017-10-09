@@ -16,6 +16,11 @@ class Objets_model extends CI_Model
         $this->load->database();
     }
 
+    public function get_objet($id_objet)
+    {
+
+    }
+
     public function get_objets()
     {
         $query = $this->db->get('Objets');
