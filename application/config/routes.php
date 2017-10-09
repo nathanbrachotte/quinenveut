@@ -53,5 +53,6 @@ $route['default_controller'] = 'accueil/index';
 $route['404_override'] = 'errors/page_missing';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['Encherir'] = "Encheres/Encherir";
 
 $route['accueil'] = ['accueil/index'];

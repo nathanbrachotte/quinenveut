@@ -18,8 +18,22 @@ class Objets_model extends CI_Model
 
     public function get_objets()
     {
-        $query = $this->db->get('Objets');
-        return $query->result_array();
+        $this->db->select('id_objet, nom_objet,desc_objet,prix_base,prix_res,date_limit,id_cat,photo,id_vendeur,statut,id_visibilite');
+        $this->db->from('Objets');
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
+    public function get_objet_Info($objetId)
+    {
+        $this->db->select('id_objet, nom_objet,desc_objet,prix_base,prix_res,date_limit,id_cat,photo,id_vendeur,statut,id_visibilite');
+        $this->db->from('Objets');
+        $this->db->where('id_objet', $objetId);
+
+        $query = $this->db->get();
+
+        return $query->result();
     }
 
     public function get_objets_utilisateur($id_user)
@@ -27,5 +41,6 @@ class Objets_model extends CI_Model
         $query = $this->db->get_where('Objets', array('id_vendeur' => $id_user));
         return $query->result_array();
     }
+
 
 }

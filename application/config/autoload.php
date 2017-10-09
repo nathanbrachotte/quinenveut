@@ -89,8 +89,10 @@ $autoload['drivers'] = array();
 | Prototype:
 |
 |	$autoload['helper'] = array('url', 'file');
+
+  // La configuration de loader afin de l'utiliser  dans le champ de formulaire 'action'
 */
-$autoload['helper'] = array();
+$autoload['helper'] = array('url');
 
 /*
 | -------------------------------------------------------------------
