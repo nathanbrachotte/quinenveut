@@ -41,7 +41,7 @@
 <div class="container">
     <div class="row myCenter">
         <div class="col-xs-6 col-md-4 col-center-block">
-            <?php echo form_open("Users/ajout_vente"); ?>
+            <?php echo form_open("Objets/ajout_vente"); ?>
             <form class="form-signin">
                 <div class="row">
                     <div class="center-block" >

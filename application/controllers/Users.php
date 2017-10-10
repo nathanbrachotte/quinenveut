@@ -130,39 +130,6 @@ class Users extends CI_Controller
     }
 
     //mise en vente
-    public function ajout_vente(){
-        $this->load->library('form_validation');
-        $this->load->helper('url');
 
-        //regles pour l'inscription
-        $this->form_validation->set_rules('nom','Nom','alpha_dash');
-        $this->form_validation->set_rules('prix_bas', 'Prix_bas', 'numeric');
-        $this->form_validation->set_rules('prix_reserve', 'Prix_reserve', 'numeric');
-
-        $bool = $this->form_validation->run();
-        if ($bool)
-        {
-            //ajouter la nouvelle enchere dans la base de donnees
-            $data = array(
-                'nom_objet'=>$this->input->post('nom'),
-                'desc_objet'=>$this->input->post('description'),
-                'prix_base'=>$this->input->post('prix_bas'),
-                'prix_res'=>$this->input->post('prix_reserve'),
-            );
-            //TODO; date et heure limite
-            //TODO; id_cat, id_vendeur
-            //TODO; public/privee
-            //TODO: image de l'objet
-
-            $this->users_model->insertVente($data);
-            echo "<script>alert('Ajouté avec succès');</script>";
-            echo "page des encheres wating.....";
-        }
-        else
-        {
-            $this->load->view('mise_en_vente');
-        }
-
-    }
 }
 
