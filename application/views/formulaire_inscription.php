@@ -21,6 +21,7 @@
 
         <div class="container">
 
+
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                     <h1> Inscription <br/> <small> Merci de renseigner vos informations </small></h1>
