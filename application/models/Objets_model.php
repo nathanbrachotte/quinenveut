@@ -43,4 +43,15 @@ class Objets_model extends CI_Model
         $this->db->update('objets', $objet);
     }
 
+    public function get_objet_Info($objetId)
+    {
+        $this->db->select('id_objet, nom_objet,desc_objet,prix_base,prix_res,date_limit,id_cat,photo,id_vendeur,statut,id_visibilite');
+        $this->db->from('Objets');
+        $this->db->where('id_objet', $objetId);
+
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
 }
