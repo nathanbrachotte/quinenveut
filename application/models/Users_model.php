@@ -51,8 +51,5 @@ class Users_model extends CI_Model
     }
 
     //ajouter une nouvelle enchere dans la base de donnees
-    public function insertVente($data)
-    {
-        $this->db->insert('Objets', $data);
-    }
+
 }

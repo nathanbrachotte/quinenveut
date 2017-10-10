@@ -30,6 +30,11 @@ class Encheres_model extends CI_Model
     {
         $query = $this->db->get_where('Encheres', array('id_objet' => $id_objet));
     }
+    public function get_max_encheres_objet($id_objet)
+    {
+        $query = $this->db->query('select max(prix) as prix,id_acheteur where id_objet='.$id_objet.';');
+        return $query;
+    }
 
     public function encherir()
     {
