@@ -71,15 +71,15 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="accueil"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+                <li><a href="<?php echo site_url('accueil') ?>"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-list"></span> Catégories</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-edit"></span> Vendre un objet</a></li>
+                <li><a href="<?php echo site_url('ajout_vente') ?>"><span class="glyphicon glyphicon-edit"></span> Vendre un objet</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-piggy-bank"></span> Mes objets en vente</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-euro"></span> Mes enchères</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="inscription"><span class="glyphicon glyphicon-user"></span> Mon compte</a></li>
-                <li><a href="connexion"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
+                <li><a href="<?php echo site_url('profil') ?>"><span class="glyphicon glyphicon-user"></span> Mon compte</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
             </ul>
         </div>
     </div>
