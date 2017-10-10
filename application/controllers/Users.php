@@ -89,6 +89,7 @@ class Users extends CI_Controller
             //session
             $statue = array(
                 'email' =>  $this->input->post('email'),
+                'statut' => 'utilisateur',
                 'logged_in' => TRUE
             );
             $this->session->set_userdata($statue);
@@ -97,6 +98,13 @@ class Users extends CI_Controller
             echo "<script>alert('Connecté avec succès');</script>";
             redirect('accueil', 'refresh');
         }
+    }
+
+    public function deconnexion(){
+        $array_items = array('email' => '', 'statut' => '', 'logged_in' => '');
+        $this->session->unset_userdata($array_items);
+
+        redirect('accueil', 'refresh');
     }
 
     //seulement les utilisateurs connectes accedent a cette page
@@ -108,6 +116,7 @@ class Users extends CI_Controller
 
         $res = $this->users_model->getInfo($data)->result();
 
+      
         foreach($res as $row){
             $nom =  $row->nom;
             $prenom =  $row->prenom;
@@ -128,38 +137,6 @@ class Users extends CI_Controller
     }
 
     //mise en vente
-    public function ajout_vente(){
-        $this->load->library('form_validation');
-        $this->load->helper('url');
 
-        //regles pour l'inscription
-        $this->form_validation->set_rules('nom','Nom','alpha_dash');
-        $this->form_validation->set_rules('prix_bas', 'Prix_bas', 'numeric');
-        $this->form_validation->set_rules('prix_reserve', 'Prix_reserve', 'numeric');
-
-        $bool = $this->form_validation->run();
-        if ($bool)
-        {
-            //ajouter la nouvelle enchere dans la base de donnees
-            $data = array(
-                'nom_objet'=>$this->input->post('nom'),
-                'desc_objet'=>$this->input->post('description'),
-                'prix_base'=>$this->input->post('prix_bas'),
-                'prix_res'=>$this->input->post('prix_reserve'),
-            );
-            //TODO; date et heure limite
-            //TODO; id+cat, id_vendeur
-            //TODO; public/privee
-
-            $this->users_model->insertVente($data);
-            echo "<script>alert('Ajouté avec succès');</script>";
-            echo "page des encheres wating.....";
-        }
-        else
-        {
-            $this->load->view('mise_en_vente');
-        }
-
-    }
 }
 
