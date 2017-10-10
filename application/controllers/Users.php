@@ -122,8 +122,9 @@ class Users extends CI_Controller
             'adresse' => $adresse
         );
 
-
+        $this->load->view('templates/header');
         $this->load->view('profil', $data);
+        $this->load->view('templates/footer');
 
     }
 
@@ -157,7 +158,9 @@ class Users extends CI_Controller
         }
         else
         {
+            $this->load->view('templates/header');
             $this->load->view('mise_en_vente');
+            $this->load->view('templates/footer');
         }
 
     }

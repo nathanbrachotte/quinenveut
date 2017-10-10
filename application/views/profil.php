@@ -16,9 +16,7 @@
         <title>Profil</title>
     </head>
 <body>
-<br><b>
-    <a href="<?php echo site_url('accueil') ?>" >Page Accueil</a>
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 <div class="col-md-12 col-md-offset-4 margin">
 <ul class="list-group col-sm-3" >
     <li class="list-group-item active"> Informations personnelles</li>
