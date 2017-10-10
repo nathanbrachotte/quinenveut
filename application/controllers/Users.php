@@ -100,6 +100,13 @@ class Users extends CI_Controller
         }
     }
 
+    public function deconnexion(){
+        $array_items = array('email' => '', 'statut' => '', 'logged_in' => '');
+        $this->session->unset_userdata($array_items);
+
+        redirect('accueil', 'refresh');
+    }
+
     //seulement les utilisateurs connectes accedent a cette page
     public function profil() {
         $this->load->library('session');
