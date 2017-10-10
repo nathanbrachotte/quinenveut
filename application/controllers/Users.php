@@ -89,6 +89,7 @@ class Users extends CI_Controller
             //session
             $statue = array(
                 'email' =>  $this->input->post('email'),
+                'statut' => 'utilisateur',
                 'logged_in' => TRUE
             );
             $this->session->set_userdata($statue);
@@ -108,6 +109,7 @@ class Users extends CI_Controller
 
         $res = $this->users_model->getInfo($data)->result();
 
+      
         foreach($res as $row){
             $nom =  $row->nom;
             $prenom =  $row->prenom;
@@ -149,8 +151,9 @@ class Users extends CI_Controller
                 'prix_res'=>$this->input->post('prix_reserve'),
             );
             //TODO; date et heure limite
-            //TODO; id+cat, id_vendeur
+            //TODO; id_cat, id_vendeur
             //TODO; public/privee
+            //TODO: image de l'objet
 
             $this->users_model->insertVente($data);
             echo "<script>alert('Ajouté avec succès');</script>";
