@@ -54,12 +54,16 @@ $route['404_override'] = 'errors/page_missing';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['accueil'] = 'accueil/lister_objets';
+
 $route['inscription'] = 'users/inscription';
 $route['connexion'] = 'users/connexion';
+$route['deconnexion'] = 'users/deconnexion';
 $route['profil'] = 'users/profil';
-$route['ajout_vente'] = 'users/ajout_vente';
+
+$route['ajout_vente'] = 'objets/ajout_vente';
 $route['objets_en_vente'] = 'objets/lister';
 $route['objets_utilisateur/(:any)'] = 'ObjetsUtilisateur/lister/$1';
+
 $route['encherir'] = "encheres/encherir";
 $route['encherir_obj/(:any)'] = 'encheres/encherir_obj/$1';
 $route['liste_encheres'] = 'encheres/encheres_listing';

@@ -21,7 +21,7 @@ class Objets extends CI_Controller
 
         $data['objets'] = $this->objets_model->get_objets();
 
-        $this->load->view('templates/header_visiteur',$data);
+        $this->load->view('templates/header');
         $this->load->view('liste_objets', $data);
         $this->load->view('templates/footer');
     }
@@ -55,7 +55,9 @@ class Objets extends CI_Controller
         }
         else
         {
+            $this->load->view('templates/header');
             $this->load->view('mise_en_vente');
+            $this->load->view('templates/footer');
         }
 
     }

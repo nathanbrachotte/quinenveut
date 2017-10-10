@@ -103,6 +103,7 @@ class Users extends CI_Controller
     public function deconnexion(){
         $array_items = array('email' => '', 'statut' => '', 'logged_in' => '');
         $this->session->unset_userdata($array_items);
+        unset($_SESSION['logged_in']);
 
         redirect('accueil', 'refresh');
     }
@@ -131,9 +132,9 @@ class Users extends CI_Controller
             'adresse' => $adresse
         );
 
-
+        $this->load->view('templates/header');
         $this->load->view('profil', $data);
-
+        $this->load->view('templates/footer');
     }
 
     //mise en vente

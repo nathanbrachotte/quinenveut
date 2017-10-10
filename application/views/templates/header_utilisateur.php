@@ -6,5 +6,5 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="<?php echo site_url('profil') ?>"><span class="glyphicon glyphicon-user"></span> Mon compte</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
+                <li><a href="<?php echo site_url('deconnexion') ?>"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
 
