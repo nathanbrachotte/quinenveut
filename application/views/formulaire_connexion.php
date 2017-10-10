@@ -8,7 +8,7 @@
         <meta name="Content-Language" content="fr" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="style.css">
+
         <title>Connexion</title>
         <style>
             .col-center-block {
@@ -40,7 +40,8 @@
                         </div>
                         <div class="form-group">
                             <label for="inputPassword" class="sr-only">Mot de passe</label>
-                            <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe" required><br><br>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe" required><br>
+                            <br>
                         </div>
 
                         <div class="form-group">

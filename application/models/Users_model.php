@@ -44,4 +44,15 @@ class Users_model extends CI_Model
             return 1;
         }
     }
+
+    //obtenir les infos
+    public function getInfo($data) {
+        return $this->db->where('mail',$data['mail'])->get('Users');
+    }
+
+    //ajouter une nouvelle enchere dans la base de donnees
+    public function insertVente($data)
+    {
+        $this->db->insert('Objets', $data);
+    }
 }

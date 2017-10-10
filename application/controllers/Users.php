@@ -40,7 +40,8 @@ class Users extends CI_Controller
                 'statut'=>0,
             );
             $this->users_model->insert($data);
-            //TODO : avertir l'utilisateur de son inscription
+            //avertir l'utilisateur de son inscription
+            echo "<script>alert('Enregistré avec succès');</script>";
             redirect('accueil', 'refresh');
         }
         else
@@ -55,7 +56,7 @@ class Users extends CI_Controller
         $res = $this->users_model->verify($str);
         if ($res == 1)
         {
-            $this->form_validation->set_message('email_check', 'The account has exsited.');
+            $this->form_validation->set_message('email_check', 'Email ou mot de passe incorrect.');
             return FALSE;
         }
         else
@@ -66,6 +67,9 @@ class Users extends CI_Controller
 
     public function connexion(){
         $this->load->helper('form');
+        $this->load->library('session');
+
+
         $data = array(
             'mail'=>$this->input->post('email'),
             'mdp'=>$this->input->post('password'),
@@ -74,13 +78,88 @@ class Users extends CI_Controller
 
         if ($res == 0)
         {
+            if($this->input->post('email') != null) {
+                echo "<script>alert('Email ou mot de passe incorrect');</script>";
+            }
+
             $this->load->view('formulaire_connexion');
         }
         else
         {
+            //session
+            $statue = array(
+                'email' =>  $this->input->post('email'),
+                'logged_in' => TRUE
+            );
+            $this->session->set_userdata($statue);
+
             //Logged in successfully
-            //TODO : avertir l'utilisateur de sa connection
+            echo "<script>alert('Connecté avec succès');</script>";
             redirect('accueil', 'refresh');
         }
     }
+
+    //seulement les utilisateurs connectes accedent a cette page
+    public function profil() {
+        $this->load->library('session');
+
+        //obtenir les infos personnelles
+        $data['mail'] = $this->session->userdata["email"];
+
+        $res = $this->users_model->getInfo($data)->result();
+
+        foreach($res as $row){
+            $nom =  $row->nom;
+            $prenom =  $row->prenom;
+            $mail =  $row->mail;
+            $adresse =  $row->adresse;
+        }
+
+        $data['profil'] = array(
+            'nom' => $nom,
+            'prenom'=> $prenom,
+            'mail' => $mail,
+            'adresse' => $adresse
+        );
+
+
+        $this->load->view('profil', $data);
+
+    }
+
+    //mise en vente
+    public function ajout_vente(){
+        $this->load->library('form_validation');
+        $this->load->helper('url');
+
+        //regles pour l'inscription
+        $this->form_validation->set_rules('nom','Nom','alpha_dash');
+        $this->form_validation->set_rules('prix_bas', 'Prix_bas', 'numeric');
+        $this->form_validation->set_rules('prix_reserve', 'Prix_reserve', 'numeric');
+
+        $bool = $this->form_validation->run();
+        if ($bool)
+        {
+            //ajouter la nouvelle enchere dans la base de donnees
+            $data = array(
+                'nom_objet'=>$this->input->post('nom'),
+                'desc_objet'=>$this->input->post('description'),
+                'prix_base'=>$this->input->post('prix_bas'),
+                'prix_res'=>$this->input->post('prix_reserve'),
+            );
+            //TODO; date et heure limite
+            //TODO; id+cat, id_vendeur
+            //TODO; public/privee
+
+            $this->users_model->insertVente($data);
+            echo "<script>alert('Ajouté avec succès');</script>";
+            echo "page des encheres wating.....";
+        }
+        else
+        {
+            $this->load->view('mise_en_vente');
+        }
+
+    }
 }
+
