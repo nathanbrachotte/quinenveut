@@ -54,8 +54,10 @@ $route['404_override'] = 'errors/page_missing';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['accueil'] = 'accueil/lister_objets';
-$route['connexion'] = 'users/connexion';
 $route['inscription'] = 'users/inscription';
+$route['connexion'] = 'users/connexion';
+$route['profil'] = 'users/profil';
+$route['ajout_vente'] = 'users/ajout_vente';
 $route['objets_en_vente'] = 'objets/lister';
 $route['encherir'] = "encheres/encherir";
 $route['encherir_obj/(:any)'] = 'encheres/encherir_obj/$1';
