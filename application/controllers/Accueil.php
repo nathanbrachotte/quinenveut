@@ -14,11 +14,6 @@ class Accueil extends CI_Controller
         $this->load->model('objets_model');
     }
 
-    public function n_importe_quoi()
-    {
-        return 2;
-    }
-
     public function lister_objets()
     {
         $data['title'] = 'Liste des objets';

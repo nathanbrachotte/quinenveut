@@ -59,6 +59,7 @@ $route['connexion'] = 'users/connexion';
 $route['profil'] = 'users/profil';
 $route['ajout_vente'] = 'users/ajout_vente';
 $route['objets_en_vente'] = 'objets/lister';
+$route['objets_utilisateur/(:any)'] = 'ObjetsUtilisateur/lister/$1';
 $route['encherir'] = "encheres/encherir";
 $route['encherir_obj/(:any)'] = 'encheres/encherir_obj/$1';
 $route['liste_encheres'] = 'encheres/encheres_listing';
