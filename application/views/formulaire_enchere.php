@@ -30,16 +30,34 @@ foreach ($objets as $objet)
 }
 ?>
 
-<div class="content-wrapper" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-<!-- Content Header (Page header) -->
-<section class="content-header">
-    </br>    </br>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+    <meta name="Content-Language" content="fr" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <title>Connexion</title>
+    <style>
+        .col-center-block {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
 
 
-    <center>
-    <h1>Encherir</h1>
-
-    <form role="form" id="encherir" action="<?php echo base_url() ?>Encherir" method="post"  role="form">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <h1> ENCHÉRIR<br/> <small> Merci de faire entrer le prix D'enchére </small></h1>
+            </div>
+        </div>
+<center>
+        <?php echo form_open("Encheres/encherir"); ?>
+        <form class="encherir">
 
         <input type="hidden" value="<?php echo $id_objet; ?>" name="id_objet" id="id_objet" />
         <input type="hidden" value="<?php echo $id_vendeur; ?>" name="id_vendeur" id="id_vendeur" />
@@ -56,7 +74,9 @@ foreach ($objets as $objet)
             <input type="submit" class="btn btn-primary" value="Enregister" />
             <input type="reset" class="btn btn-default" value="Annuler" />
         </div>
-    </form>
-    </center>
+        </form>
+        <?php echo form_close(); ?>
+</center>
 </section>
+</html>
 

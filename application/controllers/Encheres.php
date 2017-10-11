@@ -18,21 +18,27 @@ class Encheres extends CI_Controller
 
     function encheres_listing()
     {
+        $data['title'] = 'Liste des Encheres';
         $this->load->model('Encheres_model');
         $data['encheres'] = $this->Encheres_model->get_encheres();
-        $this->load->view('liste_encheres',$data);
-
+        $this->load->view('templates/header',$data);
+        $this->load->view('liste_encheres', $data);
+        $this->load->view('templates/footer');
     }
 
     function encherir_obj($id_objet)
     {
-        $data['objet'] = $this->Objets_model->get_objet($id_objet);
+        $this->load->helper('form');
+        $this->load->helper('url');
+        $data['objets'] = $this->Objets_model->get_objet_Info($id_objet);
         $this->load->view('formulaire_enchere',$data);
     }
 
 
     function encherir(){
 
+        $this->load->helper('form');
+        $this->load->helper('url');
         $this->load->library('form_validation');
 
         $id_user = $this->input->post('id_vendeur');
@@ -45,16 +51,10 @@ class Encheres extends CI_Controller
         $this->load->model('Encheres_model');
         $result = $this->Encheres_model->encherir($encheresInfo);
 
-        if($result > 0)
-        {
-            $this->session->set_flashdata('success', 'Enchere reussi');
-        }
-        else
-        {
-            $this->session->set_flashdata('error', 'Enchere failed');
-        }
-
+        echo "<script>alert('Enchére realisé avec succès');</script>";
     }
+
+
 
 
 }
