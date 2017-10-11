@@ -22,10 +22,6 @@ foreach ($objets as $row)
 
     echo '<tr><td>'.$row['nom_objet'].'</td><td> '.$row['desc_objet'].'</td></tr>';
 }
-
-echo '</ul>';
-
-
 ?>
             </tbody>
         </table>
