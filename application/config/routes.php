@@ -66,4 +66,4 @@ $route['objets_utilisateur/(:any)'] = 'ObjetsUtilisateur/lister/$1';
 
 $route['encherir'] = "encheres/encherir";
 $route['encherir_obj/(:any)'] = 'encheres/encherir_obj/$1';
-$route['liste_encheres'] = 'encheres/encheres_listing';
+$route['liste_encheres'] = 'encheres/lister';

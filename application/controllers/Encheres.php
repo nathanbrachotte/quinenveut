@@ -16,12 +16,13 @@ class Encheres extends CI_Controller
         $this->load->model('Objets_model');
     }
 
-    function encheres_listing()
+    function lister()
     {
         $data['title'] = 'Liste des Encheres';
         $this->load->model('Encheres_model');
         $data['encheres'] = $this->Encheres_model->get_encheres();
-        $this->load->view('templates/header',$data);
+
+        $this->load->view('templates/header');
         $this->load->view('liste_encheres', $data);
         $this->load->view('templates/footer');
     }
@@ -31,7 +32,10 @@ class Encheres extends CI_Controller
         $this->load->helper('form');
         $this->load->helper('url');
         $data['objets'] = $this->Objets_model->get_objet_Info($id_objet);
+
+        $this->load->view('templates/header',$data);
         $this->load->view('formulaire_enchere',$data);
+        $this->load->view('templates/footer');
     }
 
 

@@ -38,7 +38,6 @@ foreach ($objets as $objet)
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-    <title>Connexion</title>
     <style>
         .col-center-block {
             float: none;
@@ -52,7 +51,7 @@ foreach ($objets as $objet)
 
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
-                <h1> ENCHÉRIR<br/> <small> Merci de faire entrer le prix D'enchére </small></h1>
+                <h1> ENCHÉRIR<br/> <small> Merci d'entrer le montant de votre enchère </small></h1>
             </div>
         </div>
 <center>
